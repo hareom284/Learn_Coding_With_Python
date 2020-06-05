@@ -1,0 +1,6 @@
+line = input("Enter Nursely Line")
+length = len(line)
+print ("The length of the line is",length,"length long.")
+start = int(input("Enter start number"))
+end   = int(input("Enter end number"))
+print(line[start:end])
