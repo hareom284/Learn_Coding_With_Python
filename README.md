@@ -12,3 +12,7 @@ Using list in python
     x = [["a","b"], ["c"]] 
     result = sum(x, [])
 ```
+## Identify-duplicate-values-in-a-list
+```
+     [newlist[i] for i in range(len(newlist)) if i == newlist.index(newlist[i])])
+```
