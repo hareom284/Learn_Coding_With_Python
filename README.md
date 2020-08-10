@@ -13,6 +13,8 @@ Using list in python
     result = sum(x, [])
 ```
 ## Identify-duplicate-values-in-a-list
+**[Reference](https://stackoverflow.com/questions/11236006/identify-duplicate-values-in-a-list-in-python)
+
 ```
      [newlist[i] for i in range(len(newlist)) if i == newlist.index(newlist[i])])
 ```
