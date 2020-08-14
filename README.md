@@ -19,6 +19,7 @@ Using list in python
      [newlist[i] for i in range(len(newlist)) if i == newlist.index(newlist[i])])
 ```
 # Input values into a list separated by a space in Python?
+[Reference](https://www.quora.com/Python-How-can-I-add-values-into-a-list-separated-by-a-space-in-Python)
 ~~~
 
 >>> values = input().split() 
