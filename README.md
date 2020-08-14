@@ -18,3 +18,22 @@ Using list in python
 ```
      [newlist[i] for i in range(len(newlist)) if i == newlist.index(newlist[i])])
 ```
+# Input values into a list separated by a space in Python?
+~~~
+
+>>> values = input().split() 
+2 3 4 7 9 
+>>> values 
+['2', '3', '4', '7', '9'] 
+>>> type(values[2])
+<class 'str'>
+The data of value is string so you need to convert it to interger by using map(first data type,input().split())
+
+>>> values = list(map(int, input().split())) 
+2 3 4 7 9 
+>>> values 
+[2, 3, 4, 7, 9] 
+>>>type(values[1])
+<claa 'int'>
+
+~~~
