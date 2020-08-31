@@ -1,2 +1,3 @@
 # String
-print('hello')
+name = 'hello'
+print(name[:2]//he
