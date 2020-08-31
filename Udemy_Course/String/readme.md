@@ -21,3 +21,9 @@
 # Removing space using lstrip() and rstrip()
   * name.rstrip() remove the space of the right
   * name.lstrip() remove the space of the left
+`
+  names =['dog','cat','pig']
+  for i in names:
+      print(i)
+`
+     
