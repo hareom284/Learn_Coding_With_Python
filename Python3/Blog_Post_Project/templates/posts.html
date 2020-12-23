@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Posts</title>
+{% endblock %}
+
+{% block body %}
+
+
+<hr>
+<p>
+    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+      Create New Post
+    </a>
+    
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+        <form action='/posts' method='POST'>
+            Title: <input type='text' name='title'   class ='form-control'  id='title'>
+            <br>
+            Author: <input type='text' name='author' class ='form-control'   id='author'>
+            <br>
+            Post: <input type='text' name='content'  class ='form-control'  id='content'>
+        
+        
+            <br>
+        
+            <input type='submit' value='Post' class="btn btn-success">
+        </form>
+    </div>
+  </div>
+
+
+<hr>
+<h1 style="text-align: center;">All Posts</h1>
+<hr>
+{% for post in posts %}
+<h2>{{ post.title }}</h2>
+
+{% if post.author %}
+<small>Written By {{ post.author }}</small>
+{% else %}
+<h3>Written By: N/A</h3>
+{% endif %}
+
+<p>{{ post.content }}</p>
+<small>Posted Date:{{ post.date_posted }}</small>
+<a href='/posts/delete/{{post.id}}' class="btn btn-primary">Delete</a>
+<a href='/posts/edit/{{post.id}}' class="btn btn-info">Edit</a>
+<hr>
+{% endfor%}
+
+{% endblock %}
